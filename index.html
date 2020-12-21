@@ -13,69 +13,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    
     <div class="container">
-      <!-- progressbar -->
-    <ul id="progressbar">
-      <li class="active">Login</li>
-      <li>Captcha</li>
-      <li>Password</li>
-      <li>Pin code</li>
-    </ul>
-    <!-- multistep form -->
-    <form id="msform">
-      
-      
-      <!-- fieldsets -->
-      <fieldset>
-        <div class="loader-bar">
-          <div class="loader-bar__flash"></div>
+      <!-- multistep form -->
+      <button id="login-register" style="padding: 10px">
+        Login \ Register
+      </button>
+      <form id="msform">
+        <!-- fieldsets -->
+        <div id="fieldset-steps-login" class="fieldset-steps active">
+          <fieldset id="fieldset-login">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Login</h2>
+            <h3 class="fs-subtitle">This is step 1</h3>
+            <input type="text" name="username" placeholder="Username" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Log in"
+            />
+          </fieldset>
+          <fieldset>
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Captcha</h2>
+            <h3 class="fs-subtitle">This is step 2</h3>
+            <input type="text" name="captcha" placeholder="Your answer" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+            <input
+              type="button"
+              name="prev"
+              class="previous action-button"
+              value="Prev"
+            />
+          </fieldset>
+          <fieldset>
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Password</h2>
+            <h3 class="fs-subtitle">This is step 3</h3>
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+            <input
+              type="button"
+              name="prev"
+              class="previous action-button"
+              value="Prev"
+            />
+            <hr />
+            <input
+              id="refresh-password-link"
+              type="button"
+              name="next"
+              class="action-button"
+              value="Refresh password"
+            />
+          </fieldset>
+          <fieldset>
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Pin code</h2>
+            <h3 class="fs-subtitle">This is step 4</h3>
+
+            <hr />
+            <input
+              id="submit-pincode-link"
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+            <input
+              type="button"
+              name="prev"
+              class="previous action-button"
+              value="Prev"
+            />
+          </fieldset>
+          <fieldset class="loading">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Loading...</h2>
+          </fieldset>
         </div>
-        <h2 class="fs-title">Login</h2>
-        <h3 class="fs-subtitle">This is step 1</h3>
-        <input type="text" name="username" placeholder="Username" />
-        <input
-          type="button"
-          name="next"
-          class="next action-button"
-          value="Log in"
-        />
-      </fieldset>
-      <fieldset>
-        <div class="loader-bar">
-          <div class="loader-bar__flash"></div>
+
+        <div id="fieldset-steps-register" class="fieldset-steps">
+          <fieldset id="fieldset-register">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Register</h2>
+            <h3 class="fs-subtitle">This is step 1</h3>
+            <input type="text" name="username" placeholder="Username" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+          </fieldset>
+          <fieldset id="fieldset-register-captcha">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Captcha</h2>
+            <h3 class="fs-subtitle">This is step 2</h3>
+            <input type="text" name="captcha" placeholder="Your answer" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+            <input
+              type="button"
+              name="prev"
+              class="previous action-button"
+              value="Prev"
+            />
+          </fieldset>
+          <fieldset id="fieldset-register-password">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Create Password</h2>
+            <h3 class="fs-subtitle">This is step 3</h3>
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+            <input
+              type="button"
+              name="prev"
+              class="previous action-button"
+              value="Prev"
+            />
+          </fieldset>
+          <fieldset id="fieldset-register-pincode">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Pin code</h2>
+            <h3 class="fs-subtitle">This is step 4</h3>
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Continue"
+            />
+            <input
+              type="button"
+              name="prev"
+              class="previous action-button"
+              value="Prev"
+            />
+          </fieldset>
+          <fieldset id="fieldset-register-finishing" class="loading">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Loading...</h2>
+          </fieldset>
         </div>
-        <h2 class="fs-title">Captcha</h2>
-        <h3 class="fs-subtitle">This is step 2</h3>
-        <input type="text" name="captcha" placeholder="Your answer" />
-        <input
-          type="button"
-          name="next"
-          class="next action-button"
-          value="Continue"
-        />
-      </fieldset>
-      <fieldset>
-        <div class="loader-bar">
-          <div class="loader-bar__flash"></div>
+
+        <div id="fieldset-support" class="fieldset-support">
+          <fieldset id="refresh-password-fieldset">
+            <div class="loader-bar">
+              <div class="loader-bar__flash"></div>
+            </div>
+            <h2 class="fs-title">Refresh password</h2>
+            <h3 class="fs-subtitle">This is support step 1</h3>
+            <input type="text" name="username" placeholder="Username" />
+            <input
+              id="refresh-password-return-login"
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Refresh password"
+            />
+          </fieldset>
         </div>
-        <h2 class="fs-title">Password</h2>
-        <h3 class="fs-subtitle">This is step 3</h3>
-        <input type="password" name="password" placeholder="Your answer" />
-        <input
-          type="button"
-          name="next"
-          class="next action-button"
-          value="Continue"
-        />
-      </fieldset>
-      <fieldset class="loading">
-        <div class="loader-bar">
-          <div class="loader-bar__flash"></div>
-        </div>
-        <h2 class="fs-title">Loading...</h2>
-      </fieldset>
-    </form>
+      </form>
     </div>
 
     <script

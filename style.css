@@ -9,8 +9,8 @@ html {
   background: #5d51ab;
 }
 
-body {
-  font-family: montserrat, arial, verdana;
+body, input {
+  font-family: "PT Sans", sans-serif;
 }
 .container{
   max-width: 1040px;
@@ -29,7 +29,7 @@ body {
   background: white;
   border: 0 none;
   border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
   padding: 20px 30px;
   box-sizing: border-box;
   width: 80%;
@@ -51,13 +51,13 @@ body {
   margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
-  font-family: montserrat;
+  
   color: #222;
   font-size: 13px;
 }
 /*buttons*/
 #msform .action-button {
-  width: 100px;
+  min-width: 100px;
   background: #5d51ab;
   font-weight: bold;
   color: white;
@@ -67,10 +67,7 @@ body {
   padding: 10px 5px;
   margin: 10px 5px;
 }
-#msform .action-button:hover,
-#msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
-}
+
 /*headings*/
 .fs-title {
   font-size: 15px;
@@ -173,5 +170,16 @@ body {
 }
 
 fieldset.loading .loader-bar .loader-bar__flash {
-  animation: flatline 1.3s linear infinite;
+  animation: flatline 1.2s ease infinite;
+}
+.fieldset-steps{
+  display: none;
+}
+.fieldset-steps.active{
+  display: block;
+}
+
+
+#fieldset-support fieldset{
+  display: none;
 }
